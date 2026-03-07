@@ -426,6 +426,8 @@ func _setup_teleport():
 
 func _on_portal_size_changed() -> void:
 	if portal_mesh == null:
+		_setup_mesh()
+	if portal_mesh == null:
 		push_error("Failed to update portal size, portal has no mesh")
 		return
 	
