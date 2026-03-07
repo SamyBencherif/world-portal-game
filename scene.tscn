@@ -259,10 +259,138 @@ mesh = SubResource("BoxMesh_ulcgi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/Pipe/StaticBody3D" unique_id=845912306]
 shape = SubResource("ConcavePolygonShape3D_nxogm")
 
+[node name="WhiteRoom2" type="Node3D" parent="." unique_id=683560687]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -20.51688, 0, 21)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WhiteRoom2" unique_id=484744113]
+transform = Transform3D(7.96915, 0, 0, 0, 0.498072, 0, 0, 0, 9.48329, -2, 0.00867701, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom2/MeshInstance3D" unique_id=398187750]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom2/MeshInstance3D/StaticBody3D" unique_id=1391945328]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WhiteRoom2" unique_id=1577365659]
+transform = Transform3D(7.96915, 0, 0, 0, 0.498072, 0, 0, 0, 9.48329, -2, 4.49132, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom2/MeshInstance3D2" unique_id=210615687]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom2/MeshInstance3D2/StaticBody3D" unique_id=1071826086]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WhiteRoom2" unique_id=1909982432]
+transform = Transform3D(-1.74171e-07, 0.498072, 0, -3.98457, -2.17714e-08, 0, 0, 0, 9.48329, 2.23361, 2.25, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom2/MeshInstance3D3" unique_id=2031982895]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom2/MeshInstance3D3/StaticBody3D" unique_id=1462056620]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="WhiteRoom2" unique_id=1373252518]
+transform = Transform3D(-1.74171e-07, 0.498072, 0, -3.98457, -2.17714e-08, 0, 0, 0, 9.48329, -6.23361, 2.25, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom2/MeshInstance3D4" unique_id=2002851729]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom2/MeshInstance3D4/StaticBody3D" unique_id=1347203469]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="WhiteRoom2" unique_id=104227269]
+transform = Transform3D(7.64274e-15, -2.18557e-08, -8, -4, -2.18557e-08, 0, -1.74846e-07, 0.5, -3.49691e-07, -2, 2.25, -2)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom2/MeshInstance3D5" unique_id=478995421]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom2/MeshInstance3D5/StaticBody3D" unique_id=1395306078]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WhiteRoom2" unique_id=1833546873]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75936, 2, 0.246574)
+light_color = Color(0.497979, 0.583753, 0.637733, 1)
+light_energy = 15.222
+light_indirect_energy = 3.263
+omni_range = 6.52702
+
+[node name="Pipe" type="MeshInstance3D" parent="WhiteRoom2" unique_id=962554697]
+transform = Transform3D(0.401588, 0, 0, 0, 4.49779, 0, -3.55271e-15, 0, 0.401588, -2, 2, 7.65947)
+mesh = SubResource("BoxMesh_ulcgi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom2/Pipe" unique_id=939366670]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom2/Pipe/StaticBody3D" unique_id=1284542243]
+shape = SubResource("ConcavePolygonShape3D_nxogm")
+
+[node name="WhiteRoom3" type="Node3D" parent="." unique_id=1617368436]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.622854, 0, 21)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WhiteRoom3" unique_id=1398892862]
+transform = Transform3D(7.96915, 0, 0, 0, 0.498072, 0, 0, 0, 9.48329, -2, 0.00867701, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom3/MeshInstance3D" unique_id=1014976934]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom3/MeshInstance3D/StaticBody3D" unique_id=407128174]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WhiteRoom3" unique_id=1840872968]
+transform = Transform3D(7.96915, 0, 0, 0, 0.498072, 0, 0, 0, 9.48329, -2, 4.49132, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom3/MeshInstance3D2" unique_id=1108813315]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom3/MeshInstance3D2/StaticBody3D" unique_id=1952990662]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WhiteRoom3" unique_id=1138296993]
+transform = Transform3D(-1.74171e-07, 0.498072, 0, -3.98457, -2.17714e-08, 0, 0, 0, 9.48329, 2.23361, 2.25, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom3/MeshInstance3D3" unique_id=380540063]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom3/MeshInstance3D3/StaticBody3D" unique_id=890277097]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="WhiteRoom3" unique_id=1985118226]
+transform = Transform3D(-1.74171e-07, 0.498072, 0, -3.98457, -2.17714e-08, 0, 0, 0, 9.48329, -6.23361, 2.25, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom3/MeshInstance3D4" unique_id=1318301423]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom3/MeshInstance3D4/StaticBody3D" unique_id=926080124]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="WhiteRoom3" unique_id=913943211]
+transform = Transform3D(7.64274e-15, -2.18557e-08, -8, -4, -2.18557e-08, 0, -1.74846e-07, 0.5, -3.49691e-07, -2, 2.25, -2)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom3/MeshInstance3D5" unique_id=1758462820]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom3/MeshInstance3D5/StaticBody3D" unique_id=399852123]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WhiteRoom3" unique_id=1543806169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75936, 2, 0.246574)
+light_color = Color(0.497979, 0.583753, 0.637733, 1)
+light_energy = 15.222
+light_indirect_energy = 3.263
+omni_range = 6.52702
+
+[node name="Pipe" type="MeshInstance3D" parent="WhiteRoom3" unique_id=1828826243]
+transform = Transform3D(0.401588, 0, 0, 0, 4.49779, 0, -3.55271e-15, 0, 0.401588, -2, 2, 7.65947)
+mesh = SubResource("BoxMesh_ulcgi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom3/Pipe" unique_id=1668849702]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom3/Pipe/StaticBody3D" unique_id=1321065007]
+shape = SubResource("ConcavePolygonShape3D_nxogm")
+
 [node name="Portals_wr_to_pr" type="Node3D" parent="." unique_id=1909860053]
 
 [node name="Portal3D" type="Node3D" parent="Portals_wr_to_pr" unique_id=867007601 node_paths=PackedStringArray("exit_portal", "player_camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9078994, 2.2869334, 13.205451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.25, 13.25)
 script = ExtResource("1_ulcgi")
 _portal_mesh_path = NodePath("Portal3D_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
@@ -296,7 +424,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_y2354")
 
 [node name="Portal3D2" type="Node3D" parent="Portals_wr_to_pr" unique_id=865754672 node_paths=PackedStringArray("exit_portal", "player_camera")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.07750893, 2.166386, 1.9383664)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 2.25, 2)
 script = ExtResource("1_ulcgi")
 _portal_mesh_path = NodePath("Portal3D2_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
@@ -333,7 +461,7 @@ mesh = SubResource("ArrayMesh_ni31j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.357611, 0, 0)
 
 [node name="Portal3D" type="Node3D" parent="Portals_wr_to_rr" unique_id=1540016355 node_paths=PackedStringArray("exit_portal", "player_camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9078994, 2.2869334, 13.205451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2.25, 13.25)
 script = ExtResource("1_ulcgi")
 _portal_mesh_path = NodePath("Portal3D_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
@@ -367,7 +495,7 @@ cast_shadow = 0
 mesh = SubResource("ArrayMesh_y2354")
 
 [node name="Portal3D2" type="Node3D" parent="Portals_wr_to_rr" unique_id=1821205045 node_paths=PackedStringArray("exit_portal", "player_camera")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -15.89761, 2.166386, 1.9383664)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -15.75, 2.25, 2)
 script = ExtResource("1_ulcgi")
 _portal_mesh_path = NodePath("Portal3D2_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
