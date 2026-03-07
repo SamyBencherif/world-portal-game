@@ -10,12 +10,18 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="TorusMesh" id="TorusMesh_nxogm"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_3253y"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_ulcgi"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nxogm"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3253y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nxogm"]
+size = Vector3(2, 2.5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3253y"]
+size = Vector3(2, 2.5, 1)
 
 [sub_resource type="Environment" id="Environment_nxogm"]
 
@@ -78,6 +84,15 @@ omni_range = 6.52702
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="PurpleRoom" unique_id=1362928313]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.75515, 1.26437, -1.23103)
 mesh = SubResource("TorusMesh_nxogm")
+
+[node name="Pipe" type="MeshInstance3D" parent="PurpleRoom" unique_id=1343529300]
+transform = Transform3D(0.401588, 0, 0, 0, 4.49779, 0, -3.55271e-15, 0, 0.401588, -2, 2, 1.9767485)
+mesh = SubResource("BoxMesh_ulcgi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PurpleRoom/Pipe" unique_id=2051938250]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PurpleRoom/Pipe/StaticBody3D" unique_id=1500640639]
+shape = SubResource("ConcavePolygonShape3D_nxogm")
 
 [node name="RedRoom" type="Node3D" parent="." unique_id=190473799]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
@@ -193,20 +208,22 @@ light_energy = 15.222
 light_indirect_energy = 3.263
 omni_range = 6.52702
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="WhiteRoom" unique_id=751255922]
+[node name="Pipe" type="MeshInstance3D" parent="WhiteRoom" unique_id=751255922]
 transform = Transform3D(0.401588, 0, 0, 0, 4.49779, 0, -3.55271e-15, 0, 0.401588, -2, 2, 7.65947)
 mesh = SubResource("BoxMesh_ulcgi")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D6" unique_id=325572844]
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/Pipe" unique_id=325572844]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D6/StaticBody3D" unique_id=845912306]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/Pipe/StaticBody3D" unique_id=845912306]
 shape = SubResource("ConcavePolygonShape3D_nxogm")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1909860053]
+[node name="Portals" type="Node3D" parent="." unique_id=1909860053]
 
-[node name="Portal3D" type="Node3D" parent="Node3D" unique_id=867007601 node_paths=PackedStringArray("exit_portal", "player_camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.4619694)
+[node name="Portal3D" type="Node3D" parent="Portals" unique_id=867007601 node_paths=PackedStringArray("exit_portal", "player_camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5791441, 2.148736, 13.205451)
 script = ExtResource("1_ulcgi")
+_teleport_area_path = NodePath("TeleportArea")
+_teleport_collider_path = NodePath("TeleportArea/Collider")
 portal_size = Vector2(2, 2.5)
 exit_portal = NodePath("../Portal3D2")
 player_camera = NodePath("../../FirstPersonCharacter/Head/Camera")
@@ -214,13 +231,25 @@ portal_frame_width = 0.0
 viewport_size_mode = 0
 view_direction = 0
 portal_render_layer = 524288
-is_teleport = false
+is_teleport = true
+teleport_direction = 2
+rigidbody_boost = 0.0
+teleport_tolerance = 0.5
+teleport_interactions = 3
+teleport_collision_mask = 32768
 start_deactivated = false
 metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
 
-[node name="Portal3D2" type="Node3D" parent="Node3D" unique_id=865754672 node_paths=PackedStringArray("exit_portal", "player_camera")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5742965, 0, 3.9010468)
+[node name="TeleportArea" type="Area3D" parent="Portals/Portal3D" unique_id=75749235]
+
+[node name="Collider" type="CollisionShape3D" parent="Portals/Portal3D/TeleportArea" unique_id=21321206]
+shape = SubResource("BoxShape3D_nxogm")
+
+[node name="Portal3D2" type="Node3D" parent="Portals" unique_id=865754672 node_paths=PackedStringArray("exit_portal", "player_camera")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.03185916, 1.5723763, 2.0544467)
 script = ExtResource("1_ulcgi")
+_teleport_area_path = NodePath("TeleportArea")
+_teleport_collider_path = NodePath("TeleportArea/Collider")
 portal_size = Vector2(2, 2.5)
 exit_portal = NodePath("../Portal3D")
 player_camera = NodePath("../../FirstPersonCharacter/Head/Camera")
@@ -228,14 +257,26 @@ portal_frame_width = 0.0
 viewport_size_mode = 0
 view_direction = 0
 portal_render_layer = 524288
-is_teleport = false
+is_teleport = true
+teleport_direction = 2
+rigidbody_boost = 0.0
+teleport_tolerance = 0.5
+teleport_interactions = 3
+teleport_collision_mask = 32768
 start_deactivated = false
 metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
 
+[node name="TeleportArea" type="Area3D" parent="Portals/Portal3D2" unique_id=1418571963]
+
+[node name="Collider" type="CollisionShape3D" parent="Portals/Portal3D2/TeleportArea" unique_id=657919592]
+shape = SubResource("BoxShape3D_3253y")
+
 [node name="FirstPersonCharacter" parent="." unique_id=407271731 instance=ExtResource("2_nxogm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3074067, 1.2577128, 18.746113)
+collision_layer = 16385
+collision_mask = 16385
 
-[node name="Camera" parent="FirstPersonCharacter/Head" index="0"]
+[node name="Camera" parent="FirstPersonCharacter/Head" parent_id_path=PackedInt32Array(407271731, 418261046) index="0" unique_id=1507772821]
 environment = SubResource("Environment_nxogm")
 
 [editable path="FirstPersonCharacter"]
