@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dh3kqcfi5h3e4"]
+[gd_scene format=3 uid="uid://dh3kqcfi5h3e4"]
 
 [sub_resource type="GDScript" id="GDScript_5oqox"]
 script/source = "extends CharacterBody3D
@@ -214,17 +214,17 @@ func _set_speed(dir):
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luvdq"]
 albedo_color = Color(1, 0.007843138, 0.14509805, 1)
 
-[node name="FirstPersonCharacter" type="CharacterBody3D"]
+[node name="FirstPersonCharacter" type="CharacterBody3D" unique_id=1194594550]
 script = SubResource("GDScript_5oqox")
 
-[node name="Head" type="Node3D" parent="."]
+[node name="Head" type="Node3D" parent="." unique_id=418261046]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.52610177, 0)
 
-[node name="Camera" type="Camera3D" parent="Head"]
+[node name="Camera" type="Camera3D" parent="Head" unique_id=1507772821]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=540554131]
 shape = SubResource("CapsuleShape3D_5oqox")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1708981675]
 mesh = SubResource("CapsuleMesh_5oqox")
 surface_material_override/0 = SubResource("StandardMaterial3D_luvdq")
