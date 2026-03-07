@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://2jt1bl4sojkb"]
+
+[ext_resource type="Script" uid="uid://cw1r4c1d7beyv" path="res://plugins/world-portals/scripts/portal_3d.gd" id="1_ulcgi"]
+[ext_resource type="PackedScene" uid="uid://dh3kqcfi5h3e4" path="res://plugins/first-person-controller/gremlins_fpc.tscn" id="2_nxogm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_drvgu"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ulcgi"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="TorusMesh" id="TorusMesh_nxogm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_3253y"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ulcgi"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nxogm"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="Environment" id="Environment_nxogm"]
+
+[node name="Scene" type="Node3D" unique_id=1710020371]
+
+[node name="PurpleRoom" type="Node3D" parent="." unique_id=1306763467]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PurpleRoom" unique_id=1040613109]
+transform = Transform3D(8, 0, 0, 0, 0.5, 0, 0, 0, 4, -2, 0, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PurpleRoom/MeshInstance3D" unique_id=922814892]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PurpleRoom/MeshInstance3D/StaticBody3D" unique_id=1201405387]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PurpleRoom" unique_id=246172995]
+transform = Transform3D(8, 0, 0, 0, 0.5, 0, 0, 0, 4, -2, 4.5, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PurpleRoom/MeshInstance3D2" unique_id=157851331]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PurpleRoom/MeshInstance3D2/StaticBody3D" unique_id=1092864596]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PurpleRoom" unique_id=978567734]
+transform = Transform3D(-1.74846e-07, 0.5, 0, -4, -2.18557e-08, 0, 0, 0, 4, 2.25, 2.25, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PurpleRoom/MeshInstance3D3" unique_id=1961833303]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PurpleRoom/MeshInstance3D3/StaticBody3D" unique_id=80775575]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PurpleRoom" unique_id=314165680]
+transform = Transform3D(-1.74846e-07, 0.5, 0, -4, -2.18557e-08, 0, 0, 0, 4, -6.25, 2.25, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PurpleRoom/MeshInstance3D4" unique_id=1028615714]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PurpleRoom/MeshInstance3D4/StaticBody3D" unique_id=1949708953]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="PurpleRoom" unique_id=1554711319]
+transform = Transform3D(7.64274e-15, -2.18557e-08, -8, -4, -2.18557e-08, 0, -1.74846e-07, 0.5, -3.49691e-07, -2, 2.25, -2)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PurpleRoom/MeshInstance3D5" unique_id=74594706]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PurpleRoom/MeshInstance3D5/StaticBody3D" unique_id=1469779045]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="PurpleRoom" unique_id=1746010629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75936, 2, 0.246574)
+light_color = Color(0.660346, 0.122941, 0.697055, 1)
+light_energy = 15.222
+light_indirect_energy = 3.263
+omni_range = 6.52702
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="PurpleRoom" unique_id=1362928313]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.75515, 1.26437, -1.23103)
+mesh = SubResource("TorusMesh_nxogm")
+
+[node name="RedRoom" type="Node3D" parent="." unique_id=190473799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RedRoom" unique_id=569490765]
+transform = Transform3D(8, 0, 0, 0, 0.5, 0, 0, 0, 4, -2, 0, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedRoom/MeshInstance3D" unique_id=225660491]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/MeshInstance3D/StaticBody3D" unique_id=1015672788]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RedRoom" unique_id=872377168]
+transform = Transform3D(8, 0, 0, 0, 0.5, 0, 0, 0, 4, -2, 4.5, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedRoom/MeshInstance3D2" unique_id=1651919917]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/MeshInstance3D2/StaticBody3D" unique_id=1398024202]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="RedRoom" unique_id=23120251]
+transform = Transform3D(-1.74846e-07, 0.5, 0, -4, -2.18557e-08, 0, 0, 0, 4, 2.25, 2.25, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedRoom/MeshInstance3D3" unique_id=193569445]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/MeshInstance3D3/StaticBody3D" unique_id=185696356]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="RedRoom" unique_id=963126210]
+transform = Transform3D(-1.74846e-07, 0.5, 0, -4, -2.18557e-08, 0, 0, 0, 4, -6.25, 2.25, 0)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedRoom/MeshInstance3D4" unique_id=524492573]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/MeshInstance3D4/StaticBody3D" unique_id=366830494]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="RedRoom" unique_id=318310951]
+transform = Transform3D(7.64274e-15, -2.18557e-08, -8, -4, -2.18557e-08, 0, -1.74846e-07, 0.5, -3.49691e-07, -2, 2.25, -2)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RedRoom/MeshInstance3D5" unique_id=147437986]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RedRoom/MeshInstance3D5/StaticBody3D" unique_id=1673353419]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="RedRoom" unique_id=978585492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75936, 2, 0.246574)
+light_color = Color(0.701687, 0.155487, 0.173, 1)
+light_energy = 15.222
+light_indirect_energy = 3.263
+omni_range = 6.52702
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="RedRoom" unique_id=497777479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.89199, 0.708005, -0.513403)
+mesh = SubResource("BoxMesh_3253y")
+
+[node name="WhiteRoom" type="Node3D" parent="." unique_id=866612593]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5, 0, 21)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WhiteRoom" unique_id=1062159728]
+transform = Transform3D(7.96915, 0, 0, 0, 0.498072, 0, 0, 0, 9.48329, -2, 0.00867701, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D" unique_id=329664162]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D/StaticBody3D" unique_id=1285383987]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="WhiteRoom" unique_id=2116726080]
+transform = Transform3D(7.96915, 0, 0, 0, 0.498072, 0, 0, 0, 9.48329, -2, 4.49132, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D2" unique_id=870420728]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D2/StaticBody3D" unique_id=1923112312]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="WhiteRoom" unique_id=657438024]
+transform = Transform3D(-1.74171e-07, 0.498072, 0, -3.98457, -2.17714e-08, 0, 0, 0, 9.48329, 2.23361, 2.25, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D3" unique_id=613212559]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D3/StaticBody3D" unique_id=1811828386]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="WhiteRoom" unique_id=2095736870]
+transform = Transform3D(-1.74171e-07, 0.498072, 0, -3.98457, -2.17714e-08, 0, 0, 0, 9.48329, -6.23361, 2.25, 3)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D4" unique_id=340290233]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D4/StaticBody3D" unique_id=34357959]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="WhiteRoom" unique_id=874745181]
+transform = Transform3D(7.64274e-15, -2.18557e-08, -8, -4, -2.18557e-08, 0, -1.74846e-07, 0.5, -3.49691e-07, -2, 2.25, -2)
+mesh = SubResource("BoxMesh_drvgu")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D5" unique_id=1500165176]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D5/StaticBody3D" unique_id=1981042793]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WhiteRoom" unique_id=137424792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75936, 2, 0.246574)
+light_color = Color(0.497979, 0.583753, 0.637733, 1)
+light_energy = 15.222
+light_indirect_energy = 3.263
+omni_range = 6.52702
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="WhiteRoom" unique_id=751255922]
+transform = Transform3D(0.401588, 0, 0, 0, 4.49779, 0, -3.55271e-15, 0, 0.401588, -2, 2, 7.65947)
+mesh = SubResource("BoxMesh_ulcgi")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="WhiteRoom/MeshInstance3D6" unique_id=325572844]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WhiteRoom/MeshInstance3D6/StaticBody3D" unique_id=845912306]
+shape = SubResource("ConcavePolygonShape3D_nxogm")
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1909860053]
+
+[node name="Portal3D" type="Node3D" parent="Node3D" unique_id=867007601 node_paths=PackedStringArray("exit_portal", "player_camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.4619694)
+script = ExtResource("1_ulcgi")
+portal_size = Vector2(2, 2.5)
+exit_portal = NodePath("../Portal3D2")
+player_camera = NodePath("../../FirstPersonCharacter/Head/Camera")
+portal_frame_width = 0.0
+viewport_size_mode = 0
+view_direction = 0
+portal_render_layer = 524288
+is_teleport = false
+start_deactivated = false
+metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
+
+[node name="Portal3D2" type="Node3D" parent="Node3D" unique_id=865754672 node_paths=PackedStringArray("exit_portal", "player_camera")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5742965, 0, 3.9010468)
+script = ExtResource("1_ulcgi")
+portal_size = Vector2(2, 2.5)
+exit_portal = NodePath("../Portal3D")
+player_camera = NodePath("../../FirstPersonCharacter/Head/Camera")
+portal_frame_width = 0.0
+viewport_size_mode = 0
+view_direction = 0
+portal_render_layer = 524288
+is_teleport = false
+start_deactivated = false
+metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
+
+[node name="FirstPersonCharacter" parent="." unique_id=407271731 instance=ExtResource("2_nxogm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3074067, 1.2577128, 18.746113)
+
+[node name="Camera" parent="FirstPersonCharacter/Head" index="0"]
+environment = SubResource("Environment_nxogm")
+
+[editable path="FirstPersonCharacter"]
