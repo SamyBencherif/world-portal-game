@@ -222,7 +222,7 @@ shape = SubResource("BoxShape3D_u3cyc")
 [node name="Portal2A" type="Node3D" parent="WhiteRoom1" unique_id=733643447 node_paths=PackedStringArray("exit_portal")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.125, 2.5, 35)
 script = ExtResource("1_ulcgi")
-_portal_mesh_path = NodePath("Portal1A_Mesh")
+_portal_mesh_path = NodePath("Portal2A_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
 _teleport_collider_path = NodePath("TeleportArea/Collider")
 portal_size = Vector2(3.75, 4.5)
@@ -240,7 +240,7 @@ teleport_collision_mask = 32768
 start_deactivated = false
 metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
 
-[node name="Portal1A_Mesh" type="MeshInstance3D" parent="WhiteRoom1/Portal2A" unique_id=1356481021]
+[node name="Portal2A_Mesh" type="MeshInstance3D" parent="WhiteRoom1/Portal2A" unique_id=1356481021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
 layers = 524288
 material_override = ExtResource("2_u3cyc")
@@ -326,6 +326,39 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 25, 
 pixel_size = 0.1
 texture_filter = 0
 text = "WhiteRoom2"
+
+[node name="Portal3B" type="Node3D" parent="WhiteRoom2" unique_id=316620593 node_paths=PackedStringArray("exit_portal")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 23.125, 2.5, 35)
+script = ExtResource("1_ulcgi")
+_portal_mesh_path = NodePath("Portal3B_Mesh")
+_teleport_area_path = NodePath("TeleportArea")
+_teleport_collider_path = NodePath("TeleportArea/Collider")
+portal_size = Vector2(3.75, 4.5)
+exit_portal = NodePath("../../PurpleRoom/Portal3A")
+portal_frame_width = 0.0
+viewport_size_mode = 0
+view_direction = 0
+portal_render_layer = 524288
+is_teleport = true
+teleport_direction = 2
+rigidbody_boost = 0.0
+teleport_tolerance = 0.5
+teleport_interactions = 3
+teleport_collision_mask = 32768
+start_deactivated = false
+metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
+
+[node name="Portal3B_Mesh" type="MeshInstance3D" parent="WhiteRoom2/Portal3B" unique_id=299341794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+layers = 524288
+material_override = ExtResource("2_u3cyc")
+cast_shadow = 0
+mesh = SubResource("ArrayMesh_m7jmp")
+
+[node name="TeleportArea" type="Area3D" parent="WhiteRoom2/Portal3B" unique_id=1361978970]
+
+[node name="Collider" type="CollisionShape3D" parent="WhiteRoom2/Portal3B/TeleportArea" unique_id=1754242115]
+shape = SubResource("BoxShape3D_m7jmp")
 
 [node name="WhiteRoom3" type="Node" parent="." unique_id=945497829]
 
@@ -510,6 +543,39 @@ mesh = SubResource("ArrayMesh_m7jmp")
 [node name="Collider" type="CollisionShape3D" parent="PurpleRoom/Portal1B/TeleportArea" unique_id=62803180]
 shape = SubResource("BoxShape3D_m7jmp")
 
+[node name="Portal3A" type="Node3D" parent="PurpleRoom" unique_id=625089902 node_paths=PackedStringArray("exit_portal")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -22.875, 2.5, 35)
+script = ExtResource("1_ulcgi")
+_portal_mesh_path = NodePath("Portal3A_Mesh")
+_teleport_area_path = NodePath("TeleportArea")
+_teleport_collider_path = NodePath("TeleportArea/Collider")
+portal_size = Vector2(3.75, 4.5)
+exit_portal = NodePath("../../WhiteRoom2/Portal3B")
+portal_frame_width = 0.0
+viewport_size_mode = 0
+view_direction = 0
+portal_render_layer = 524288
+is_teleport = true
+teleport_direction = 2
+rigidbody_boost = 0.0
+teleport_tolerance = 0.5
+teleport_interactions = 3
+teleport_collision_mask = 32768
+start_deactivated = false
+metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
+
+[node name="Portal3A_Mesh" type="MeshInstance3D" parent="PurpleRoom/Portal3A" unique_id=2093388921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+layers = 524288
+material_override = ExtResource("2_u3cyc")
+cast_shadow = 0
+mesh = SubResource("ArrayMesh_m7jmp")
+
+[node name="TeleportArea" type="Area3D" parent="PurpleRoom/Portal3A" unique_id=276396756]
+
+[node name="Collider" type="CollisionShape3D" parent="PurpleRoom/Portal3A/TeleportArea" unique_id=996927746]
+shape = SubResource("BoxShape3D_m7jmp")
+
 [node name="donut" parent="PurpleRoom" unique_id=1020228337 instance=ExtResource("4_m7jmp")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -25, 1.6, 44)
 
@@ -594,7 +660,7 @@ text = "RedRoom"
 [node name="Portal2B" type="Node3D" parent="RedRoom" unique_id=1985766480 node_paths=PackedStringArray("exit_portal")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -47.875, 2.5, 35)
 script = ExtResource("1_ulcgi")
-_portal_mesh_path = NodePath("Portal1B_Mesh")
+_portal_mesh_path = NodePath("Portal2B_Mesh")
 _teleport_area_path = NodePath("TeleportArea")
 _teleport_collider_path = NodePath("TeleportArea/Collider")
 portal_size = Vector2(3.75, 4.5)
@@ -612,7 +678,7 @@ teleport_collision_mask = 32768
 start_deactivated = false
 metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
 
-[node name="Portal1B_Mesh" type="MeshInstance3D" parent="RedRoom/Portal2B" unique_id=757123279]
+[node name="Portal2B_Mesh" type="MeshInstance3D" parent="RedRoom/Portal2B" unique_id=757123279]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
 layers = 524288
 material_override = ExtResource("2_u3cyc")
