@@ -534,6 +534,148 @@ mesh = SubResource("ArrayMesh_m7jmp")
 [node name="Collider" type="CollisionShape3D" parent="WhiteRoom3/Portal_WR3E/TeleportArea" unique_id=2129851281]
 shape = SubResource("BoxShape3D_m7jmp")
 
+[node name="GreatRoom" type="Node" parent="." unique_id=1856055415]
+
+[node name="floor" type="MeshInstance3D" parent="GreatRoom" unique_id=480755748]
+transform = Transform3D(-20, 0, -3.019916e-06, 0, 0.5, 0, 3.019916e-06, 0, -20, 76, 0, 43)
+mesh = SubResource("BoxMesh_drvgu")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreatRoom/floor" unique_id=1481731987]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreatRoom/floor/StaticBody3D" unique_id=1639973835]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="ceiling" type="MeshInstance3D" parent="GreatRoom" unique_id=1214690759]
+transform = Transform3D(-20, 0, -3.019916e-06, 0, 0.5, 0, 3.019916e-06, 0, -20, 76, 9, 43)
+mesh = SubResource("BoxMesh_drvgu")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreatRoom/ceiling" unique_id=1853168712]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreatRoom/ceiling/StaticBody3D" unique_id=1686850201]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="wall_west" type="MeshInstance3D" parent="GreatRoom" unique_id=224998668]
+transform = Transform3D(3.715468e-07, -0.5, -3.019916e-06, -8.5, -2.1855694e-08, 7.145478e-21, -5.610201e-14, 7.54979e-08, -20, 65.75, 4.5, 43)
+mesh = SubResource("BoxMesh_drvgu")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreatRoom/wall_west" unique_id=2075944475]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreatRoom/wall_west/StaticBody3D" unique_id=143798144]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="wall_east" type="MeshInstance3D" parent="GreatRoom" unique_id=454300016]
+transform = Transform3D(3.715468e-07, -0.5, -3.019916e-06, -8.5, -2.1855694e-08, 7.145478e-21, -5.610201e-14, 7.54979e-08, -20, 86.25, 4.5, 43)
+mesh = SubResource("BoxMesh_drvgu")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreatRoom/wall_east" unique_id=2108008077]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreatRoom/wall_east/StaticBody3D" unique_id=1033974749]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="wall_south" type="MeshInstance3D" parent="GreatRoom" unique_id=1997247186]
+transform = Transform3D(1.6240873e-14, -2.1855694e-08, 20, -8.5, -2.1855694e-08, 1.1152672e-19, 3.715468e-07, -0.5, -8.742278e-07, 76, 4.5, 53.25)
+mesh = SubResource("BoxMesh_drvgu")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreatRoom/wall_south" unique_id=1326622454]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreatRoom/wall_south/StaticBody3D" unique_id=570674237]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="wall_north" type="MeshInstance3D" parent="GreatRoom" unique_id=801726627]
+transform = Transform3D(1.6240873e-14, -2.1855694e-08, 20, -8.5, -2.1855694e-08, 1.1152672e-19, 3.715468e-07, -0.5, -8.742278e-07, 76, 4.5, 32.75)
+mesh = SubResource("BoxMesh_drvgu")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GreatRoom/wall_north" unique_id=1712560411]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GreatRoom/wall_north/StaticBody3D" unique_id=302448129]
+shape = SubResource("ConcavePolygonShape3D_ulcgi")
+
+[node name="light" type="OmniLight3D" parent="GreatRoom" unique_id=74333458]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 76, 4.5, 43)
+light_color = Color(0.497979, 0.583753, 0.637733, 1)
+light_energy = 15.222
+light_indirect_energy = 3.263
+omni_range = 30.0
+
+[node name="label" type="Label3D" parent="GreatRoom" unique_id=1871957541]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 75, 0, 30)
+pixel_size = 0.1
+texture_filter = 0
+text = "GreatRoom"
+
+[node name="Portal_GRN" type="Node3D" parent="GreatRoom" unique_id=248636336 node_paths=PackedStringArray("exit_portal")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 72.880005, 2.5, 35)
+script = ExtResource("1_ulcgi")
+_portal_mesh_path = NodePath("Portal_WR3W_Mesh")
+_teleport_area_path = NodePath("TeleportArea")
+_teleport_collider_path = NodePath("TeleportArea/Collider")
+portal_size = Vector2(3.75, 4.5)
+exit_portal = NodePath("../../GreenRoom/Portal_GRE")
+portal_frame_width = 0.0
+viewport_size_mode = 0
+view_direction = 0
+portal_render_layer = 524288
+is_teleport = true
+teleport_direction = 2
+rigidbody_boost = 0.0
+teleport_tolerance = 0.5
+teleport_interactions = 3
+teleport_collision_mask = 32768
+start_deactivated = false
+metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
+
+[node name="Portal_WR3W_Mesh" type="MeshInstance3D" parent="GreatRoom/Portal_GRN" unique_id=297690342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+layers = 524288
+material_override = ExtResource("2_u3cyc")
+cast_shadow = 0
+mesh = SubResource("ArrayMesh_m7jmp")
+
+[node name="TeleportArea" type="Area3D" parent="GreatRoom/Portal_GRN" unique_id=1941211908]
+
+[node name="Collider" type="CollisionShape3D" parent="GreatRoom/Portal_GRN/TeleportArea" unique_id=2016883228]
+shape = SubResource("BoxShape3D_m7jmp")
+
+[node name="Portal_GRS" type="Node3D" parent="GreatRoom" unique_id=830837838 node_paths=PackedStringArray("exit_portal")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 77.130005, 2.5, 35)
+visible = false
+script = ExtResource("1_ulcgi")
+_portal_mesh_path = NodePath("Portal_WR3E_Mesh")
+_teleport_area_path = NodePath("TeleportArea")
+_teleport_collider_path = NodePath("TeleportArea/Collider")
+portal_size = Vector2(3.75, 4.5)
+exit_portal = NodePath("../../RedRoom/Portal_RRW")
+portal_frame_width = 0.0
+viewport_size_mode = 0
+view_direction = 0
+portal_render_layer = 524288
+is_teleport = true
+teleport_direction = 2
+rigidbody_boost = 0.0
+teleport_tolerance = 0.5
+teleport_interactions = 3
+teleport_collision_mask = 32768
+start_deactivated = false
+metadata/_custom_type_script = "uid://cw1r4c1d7beyv"
+
+[node name="Portal_WR3E_Mesh" type="MeshInstance3D" parent="GreatRoom/Portal_GRS" unique_id=1242897184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
+layers = 524288
+material_override = ExtResource("2_u3cyc")
+cast_shadow = 0
+mesh = SubResource("ArrayMesh_m7jmp")
+
+[node name="TeleportArea" type="Area3D" parent="GreatRoom/Portal_GRS" unique_id=1118138438]
+
+[node name="Collider" type="CollisionShape3D" parent="GreatRoom/Portal_GRS/TeleportArea" unique_id=931606481]
+shape = SubResource("BoxShape3D_m7jmp")
+
 [node name="PurpleRoom" type="Node" parent="." unique_id=569639499]
 
 [node name="floor" type="MeshInstance3D" parent="PurpleRoom" unique_id=1163827765]
